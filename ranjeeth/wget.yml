@@ -1,0 +1,6 @@
+- name: this is for wget
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for wget
+    yum: name=wget state=present

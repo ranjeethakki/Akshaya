@@ -1,0 +1,6 @@
+- name: this is for file
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for file
+    file: path=/var/www/html/index.html state=touch

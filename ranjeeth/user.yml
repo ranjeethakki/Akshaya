@@ -1,0 +1,5 @@
+- name: this is for user creation
+  hosts: remote
+  tasks:
+  - name: this is for user creation
+    user: name=akshaya-user group=akshaya

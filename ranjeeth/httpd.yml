@@ -1,0 +1,6 @@
+- name: this is for HTTPD creation
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for HTTPD creation
+    yum: name=httpd state=present

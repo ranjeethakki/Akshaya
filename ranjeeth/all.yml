@@ -1,0 +1,22 @@
+- name: this is for group creation
+  hosts: remote
+  tasks:
+  - name: this is for group creation
+    group: name=akshaya
+  - name: this is for user creation
+    user: name=akshaya-user group=akshaya
+  - name: this is for HTTPD creation
+    yum: name=httpd state=present
+  - name: this is for service start
+    service: name=httpd state=started
+  - name: this is for file
+    file: path=/var/www/html/index.html state=touch
+  - name: this is for copy
+    copy: src=/Home/common/second.html dest=/var/www/html/
+  - name: this is for git
+    yum: name=git state=present
+  - name: this is for wget
+    yum: name=wget state=present
+  - name: this is for clone
+    git: repo=https://github.com/scmgalaxy/ansible-role-template dest=/Home/common/gitclone/
+

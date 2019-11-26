@@ -1,0 +1,6 @@
+- name: this is for git
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for git
+    yum: name=git state=present

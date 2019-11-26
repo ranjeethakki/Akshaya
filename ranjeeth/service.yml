@@ -1,0 +1,6 @@
+- name: this is for service start
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for service start
+    service: name=httpd state=started

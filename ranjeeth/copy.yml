@@ -1,0 +1,6 @@
+- name: this is for copy
+  hosts: remote
+  user: root
+  tasks:
+  - name: this is for copy
+    copy: src=/Home/common/second.html dest=/var/www/html/

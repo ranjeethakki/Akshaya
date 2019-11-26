@@ -1,0 +1,5 @@
+- name: this is for group creation
+  hosts: remote
+  tasks:
+  - name: this is for httpd install
+    group: name=akshaya
