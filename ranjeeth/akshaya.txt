@@ -1,0 +1,21 @@
+ansible localhost -m group -a"name=ranjeeth"
+ansible localhost -m user -a"name=ranjeeth-user group=ranjeeth"
+ansible localhost -m yum -a"name=httpd state=present"
+ansible localhost -m service -a"name=httpd state=started"
+ansible localhost -m file -a"path=/var/www/html name=index.html state=file"
+ansible localhost -m copy -a"src=index.html dest=/var/www/html/"
+ansible localhost -m copy -a"src=second.html dest=/var/www/html/"
+ansible localhost -m yum -a"name=git state=present"
+ansible localhost -m yum -a"name=wget state=present"
+ansible localhost -m git -a"repo=https://github.com/scmgalaxy/ansible-role-template dest=/Home/common/gitclone/"
+
+
+
+
+
+lab-2
+
+ansible all -i 192.168.56.101, -m yum -a"name=httpd state=present" -u root -b -k
+ansible all -i 192.168.56.101, -m service -a"name=httpd state=started" -u root -b -k
+ansible all -i 192.168.56.101, -m file -a"name=index.html state=touch" -u root -b -k
+ansible all -i 192.168.56.101, -m copy -a"src=index.html dest=/var/www/html/" -u root -b -k
